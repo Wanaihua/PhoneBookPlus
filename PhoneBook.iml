@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/jstl-1.2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/classmate-0.8.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/hibernate-validator-5.0.1.Final.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/hibernate-validator-annotation-processor-5.0.1.Final.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/hibernate-validator-cdi-5.0.1.Final.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/jboss-logging-3.1.1.GA.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/mysql-connector-java-5.0.4-bin.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/validation-api-1.1.0.Final.jar!/" />
+    <conelement value="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER" />
+    <conelement value="org.eclipse.jst.j2ee.internal.web.container" />
+    <conelement value="org.eclipse.jst.j2ee.internal.module.container" />
+    <conelement value="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_CORE" />
+    <conelement value="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_Persistence_JDBC" />
+    <conelement value="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_Persistence_CORE" />
+    <conelement value="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_AOP" />
+    <conelement value="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_WEB" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/WebRoot/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/WebRoot" relative="/" />
+        </webroots>
+        <sourceRoots />
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/WebRoot/WEB-INF/applicationContext.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/WebRoot/WEB-INF/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER" level="application" />
+    <orderEntry type="library" name="org.eclipse.jst.j2ee.internal.web.container" level="application" />
+    <orderEntry type="library" name="org.eclipse.jst.j2ee.internal.module.container" level="application" />
+    <orderEntry type="library" name="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_CORE" level="application" />
+    <orderEntry type="library" name="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_Persistence_JDBC" level="application" />
+    <orderEntry type="library" name="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_Persistence_CORE" level="application" />
+    <orderEntry type="library" name="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_AOP" level="application" />
+    <orderEntry type="library" name="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_WEB" level="application" />
+    <orderEntry type="module-library">
+      <library name="jstl-1.2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/jstl-1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="classmate-0.8.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/classmate-0.8.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="hibernate-validator-5.0.1.Final.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/hibernate-validator-5.0.1.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="hibernate-validator-annotation-processor-5.0.1.Final.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/hibernate-validator-annotation-processor-5.0.1.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="hibernate-validator-cdi-5.0.1.Final.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/hibernate-validator-cdi-5.0.1.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jboss-logging-3.1.1.GA.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/jboss-logging-3.1.1.GA.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mysql-connector-java-5.0.4-bin.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/mysql-connector-java-5.0.4-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="validation-api-1.1.0.Final.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/validation-api-1.1.0.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
+  </component>
+</module>

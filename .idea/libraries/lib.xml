@@ -1,0 +1,53 @@
+<component name="libraryTable">
+  <library name="lib">
+    <ANNOTATIONS>
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.aop/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.aop/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.aspects/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.aspects/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.beans/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.beans/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.context.support/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.context.support/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.context/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.context/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.core/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.core/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.expression/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.expression/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.instrument.tomcat/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.instrument/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.integration-tests/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.jdbc/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.jdbc/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.jms/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.jms/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.orm/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.orm/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.oxm/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.oxm/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.test/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.test/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.transaction/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.transaction/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.web.portlet/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.web.portlet/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.web.servlet/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.web.servlet/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.web.struts/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.web.struts/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.web/src/main/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/spring-framework-3.0.5.RELEASE/projects/org.springframework.web/src/test/java" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
