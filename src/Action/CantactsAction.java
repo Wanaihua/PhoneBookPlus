@@ -1,9 +1,16 @@
 package Action;
 
-import java.util.List;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.Writer;
+import java.net.URLEncoder;
+import java.util.*;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -22,7 +29,7 @@ import Service.ContactsService;
 public class CantactsAction {
 	ContactsService contactsService;
 	Page page;
-	
+
 	public ContactsService getContactsService() {
 		return contactsService;
 	}
@@ -125,12 +132,12 @@ public class CantactsAction {
 	//新建联系人
 	@RequestMapping("registerContactss.do")
 	public String registerContactss(@Valid@ModelAttribute("command") Contacts contacts,BindingResult bindingResult,HttpSession session,HttpServletRequest request){
+		int who=contacts.getWho();
 		if(bindingResult.hasErrors()){
-			request.setAttribute("list",contactsService.findkind());
+			request.setAttribute("list",contactsService.findkind(who));
 			return "registerContacts1";
 		}
 		int n=contactsService.registerContacts(contacts);
-		int who=contacts.getWho();
 		if(n>0){
 			String pageNum=request.getParameter("p")==null?"1":request.getParameter("p");
 		    request.setAttribute("page", contactsService.getContactsPage(Integer.valueOf(pageNum),who));
@@ -159,7 +166,8 @@ public class CantactsAction {
 	//获取类,新建联系人
 	@RequestMapping("registerContacts1.do")
 	public String findkind(HttpServletRequest request,HttpSession session){
-		request.setAttribute("list",contactsService.findkind());
+		int who=Integer.parseInt(request.getParameter("who"));
+		request.setAttribute("list",contactsService.findkind(who));
 		return "registerContacts1";
 	}
 	//类显示界面更改联系人
@@ -249,18 +257,30 @@ public class CantactsAction {
 	//根据Id查询联系人信息跳转修改页
 	@RequestMapping("queryContactsById.do")
 	public String queryContactsById(HttpSession session,HttpServletRequest request){
+		int who=1;
 	    int id=Integer.parseInt(request.getParameter("id"));
 	    List list=contactsService.queryContactsById(id);
-	    request.setAttribute("listt",contactsService.findkind());
+		Iterator it=list.iterator();
+		while(it.hasNext()){
+			Map map=(Map)it.next();
+			who=Integer.parseInt(map.get("who").toString());
+		}
+	    request.setAttribute("listt",contactsService.findkind(who));
 	    session.setAttribute("list", list);
 	    return "updateContacts";
 	}
 	//根据Id查询联系人信息跳转修改页
 	@RequestMapping("queryContactsByIdd.do")
 	public String queryContactsByIdd(HttpSession session,HttpServletRequest request){
+		int who=1;
 	    int id=Integer.parseInt(request.getParameter("id"));
 	    List list=contactsService.queryContactsById(id);
-	    request.setAttribute("listt",contactsService.findkind());
+		Iterator it=list.iterator();
+		while(it.hasNext()){
+			Map map=(Map)it.next();
+			who=Integer.parseInt(map.get("who").toString());
+		}
+	    request.setAttribute("listt",contactsService.findkind(who));
 	    session.setAttribute("list", list);
 	    return "updateContactss";
 	}
@@ -292,5 +312,35 @@ public class CantactsAction {
 				request.setAttribute("page",contactsService.getContactsPage(Integer.valueOf(pageNum),who));
 	        	return "allShow";
 	 }
-	
+
+	 //导出联系人
+	 @RequestMapping("exportExcel.do")
+	public void importExcel(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		int who=Integer.parseInt(request.getParameter("who"));
+		List list = contactsService.queryContacts(who);
+		 // 表头数据
+		 List<Object> head = Arrays.asList("姓名","昵称","性别","生日","电话","QQ","邮箱","地址","MSN","简介");
+		 System.out.println(list);
+		 // 将数据汇总
+		 List<List<Object>> sheetDataList = new ArrayList<>();
+		 sheetDataList.add(head);
+		 Iterator it=list.iterator();
+		 while (it.hasNext()) {
+			 Map map=(Map) it.next();
+			 List<Object> row = new ArrayList<>();
+			 row.add(map.get("PersonName"));
+			 row.add(map.get("PersonNickName"));
+			 row.add(map.get("PersonSex"));
+			 row.add(map.get("PersonBirthday"));
+			 row.add(map.get("PersonTelephone"));
+			 row.add(map.get("PersonQQ"));
+			 row.add(map.get("PersonEmail"));
+			 row.add(map.get("PersonAddress"));
+			 row.add(map.get("PersonMSN"));
+			 row.add(map.get("PersonInfo"));
+			 sheetDataList.add(row);
+		 }
+		 // 导出数据
+		 ExcelUtils.export(response,"联系人表", sheetDataList);
+	 }
 }

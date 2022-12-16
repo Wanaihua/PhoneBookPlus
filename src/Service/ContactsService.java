@@ -69,8 +69,8 @@ public class ContactsService {
 	public int registerContacts(Contacts contacts) {
 		return contactsDao.registerContacts(contacts);
 	}
-	public List findkind() {
-		return contactsDao.findkind();
+	public List findkind(int who) {
+		return contactsDao.findkind(who);
 	}
 
 	public int login(User user) {
@@ -80,4 +80,8 @@ public class ContactsService {
 	public boolean register(User user) {
 		return contactsDao.register(user);
 	}
+
+    public List queryContacts(int who) {
+		return contactsDao.queryContacts(who);
+    }
 }

@@ -39,14 +39,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			color: red;
 		}
 		
-	</style>	
-	
+	</style>
   </head>
   
   <body class="g">
    <fieldset style="width: 300px;">
   	<legend><h2><spring:message code="ContactsUpdate"></spring:message></h2></legend>
     <form name="form1" id="form1" action="updateContacts.do?personId=${sessionScope.list.get(0).personId}" method="post">
+		<input style="display: none" name="who" id="who" value=${sessionScope.list.get(0).who}>
     <table>
         <tr><td><spring:message code="personName"></spring:message>: </td><td><input name="personName" id="personName" value=${sessionScope.list.get(0).personName }><form:errors path="personName"></form:errors></td></tr>
         <tr><td><spring:message code="NickName"></spring:message>: </td><td><input  name="personNickName" id="personNickName" value=${sessionScope.list.get(0).personNickName }></td></tr>
@@ -80,7 +80,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			 var opt=document.getElementsByTagName("option");
 			 var m=document.getElementById("man");
 			 var w=document.getElementById("woman");
-			 var a=${sessionScope.list.get(0).kindId }-1;
+			 var a=${sessionScope.list.get(0).kindId };
 			 var z="${sessionScope.list.get(0).personSex }";
 			 for(var i=0;i<opt.length;i++){
 				 if(opt[i].value==a){

@@ -11,11 +11,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    
+
     <title>My JSP 'index.jsp' starting page</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="expires" content="0">
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 	<!--
@@ -87,10 +87,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			right: 0;
 		}
 		.butlast{
-			margin-left:260px;
+			float: left;
+			margin-left: 20px;
 			background-color: #FFC1C1;
 		}
-		.butlast:hover{			
+		.butlast:hover{
 			background-color: #CD9B9B;
 		}
 		.sumbut {
@@ -98,7 +99,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			padding: 3px 5px;
   			font-size: 4px;
   			cursor: pointer;
-  			text-align: center;   
+  			text-align: center;
   			text-decoration: none;
   			outline: none;
  			color: #fff;
@@ -133,7 +134,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}
 		}
 		function a(){
-			window.open("registerContacts1.do","_self");
+			window.open("registerContacts1.do?who=<%=who%>","_self");
 		}
 		function d(){
 			window.open("findAll.do?who=<%=who %>","_self");
@@ -141,9 +142,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		function b(){
 			window.open("findkind.do?who=<%=who %>","_self");
 		}
+		function exportExcel(){
+			window.open("exportExcel.do?who=<%=who %>","_self");
+		}
 	</script>
   </head>
-  
+
   <body class="g">
  <!--   <%
       if(request.getAttribute("page")!=null){
@@ -171,7 +175,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</table>
     	</div>
     	<div class="c">
-    	
+
     	<div class="e">
     	 <spring:message code="page"></spring:message>：${page.currentPage}/${page.totalPage}&nbsp;每页${page.pageSize}&nbsp;总数${page.totalRecord}&nbsp;&nbsp;&nbsp;&nbsp;
   <br>
@@ -181,7 +185,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            	<c:param name='who' value='<%=who%>'></c:param>
            	</c:url>
        	"><spring:message code="FirstPage"></spring:message></a>
-    <c:choose>  
+    <c:choose>
            <c:when test="${page.currentPage>1}">
                <a href="
                			<c:url value='listtt.do'>
@@ -189,10 +193,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                				<c:param name='who' value='<%=who%>'></c:param>
                			</c:url>
                		"><spring:message code="PreviousPage"></spring:message></a>
-           </c:when>  
+           </c:when>
 
     </c:choose>
-    <c:choose>  
+    <c:choose>
            <c:when test="${page.currentPage<page.totalPage}">
                <a href="
                			<c:url value='listtt.do'>
@@ -200,7 +204,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                				<c:param name='who' value='<%=who%>'></c:param>
                			</c:url>
                		"><spring:message code="NextPage"></spring:message></a>
-           </c:when>  
+           </c:when>
     </c:choose>
     <a href="
         	<c:url value='listtt.do'>
@@ -208,9 +212,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			<c:param name="who" value="<%=who%>"></c:param>
  			</c:url>
          "><spring:message code="LastPage"></spring:message></a>
-     </div> 
+     </div>
     </div>
-    <input type="button" value='<spring:message code="NewContacts"></spring:message>' onclick="a()" class="butlast" />
+			 <div style="margin-left: 450px;">
+				 <input type="button" value='<spring:message code="Export"></spring:message>' onclick="exportExcel()" class="butlast" />
+				 <input type="button" value='<spring:message code="NewContacts"></spring:message>' onclick="a()" class="butlast" />
+			 </div>
+
     <a href="findkind.do?who=<%=who %>" class="a"><img src="img/back.jpg" width="20" height="20"></img></a>
     </fieldset>
 

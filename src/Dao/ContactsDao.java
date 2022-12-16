@@ -167,8 +167,8 @@ public class ContactsDao {
 		String sql="select * from contacts_message where personId=?";
 		return jdbcTemplate.queryForList(sql,id);
 	}
-	public List findkind() {
-		 String sql = "select * from kind_message ";
+	public List findkind(int who) {
+		 String sql = "select * from kind_message where who='"+who+"'";
 	        List list=jdbcTemplate.queryForList(sql);
 	        return list;
 	}
@@ -197,4 +197,9 @@ public class ContactsDao {
 			return false;
 		}
 	}
+
+    public List queryContacts(int who) {
+		String sql="select  personName,personNickName,personSex,personBirthday,personTelephone,personQQ,personEmail,personAddress,personMSN,personInfo from contacts_message where who=?";
+		return jdbcTemplate.queryForList(sql,who);
+    }
 }
