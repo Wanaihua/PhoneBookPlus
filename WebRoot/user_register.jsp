@@ -97,7 +97,7 @@
 <div class="bg">
     <div class="body">
         <div class="img">
-            <img src="/image/img-01.png" alt="IMG">
+            <img src="img/img-01.png" alt="IMG">
         </div>
         <div class="rig">
             <form  name="form1" id="form1" action="/register.do" method="post">
@@ -270,7 +270,7 @@
                 <input name="birthday" type="text" style="display: none" id="userBirthday"/>
             </form>
         </div>
-        <a href="/user_login.jsp" class="imgg"><img src="/image/goback.png"></a>
+        <a href="/user_login.jsp" class="imgg"><img src="img/goback.png"></a>
     </div>
 </div>
 </body>

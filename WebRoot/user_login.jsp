@@ -68,7 +68,7 @@
  <div class="bg">
   <div class="body">
    <div class="img">
-    <img src="/img/img-01.png" alt="IMG">
+    <img src="img/img-01.png" alt="IMG">
    </div>
    <form action="/login.do" method="post" name="form1" id="form1" >
     <div class="title">
